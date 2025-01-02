@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "ui": "*",
+    "ui": "workspace:*",
     "next": "^15.1.2",
     "react": "^19",
     "react-dom": "^19"
@@ -19,6 +19,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "typescript": "^5.0.4",
-    "eslint-custom": "workspace:*"
+    "eslint-custom": "workspace:*",
+    "tsconfig": "workspace:*"
   }
 } 

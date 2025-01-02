@@ -1,0 +1,23 @@
+{
+  "name": "usecase",
+  "version": "0.0.0",
+  "author": "SeungHoon Jeong",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint \"**/*.ts\"",
+    "test": "vitest --passWithNoTests",
+    "test:watch": "vitest --watch --passWithNoTests"
+  },
+  "dependencies": {
+    "entity": "workspace:*",
+    "util": "workspace:*"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.7",
+    "@babel/preset-env": "^7.23.8",
+    "@babel/preset-typescript": "^7.23.3",
+    "vite-tsconfig-paths": "^4.3.2",
+    "vitest": "^1.6.0",
+    "tsconfig": "workspace:*"
+  }
+}

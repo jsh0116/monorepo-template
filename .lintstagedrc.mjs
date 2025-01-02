@@ -13,7 +13,7 @@ function buildNextLintCommand(app, filenames) {
     .join(' --file ')}`;
 }
 
-function buildEslintCommand(filenames) {
+function buildESLintCommand(filenames) {
   if (filenames.length === 0) {
     return 'echo "No files to lint"';
   }
@@ -49,7 +49,7 @@ const linter = {
     return [
       buildNextLintCommand('web', webNextFiles),
       buildPrettierCommand(webNextFiles),
-      buildEslintCommand(scriptFiles),
+      buildESLintCommand(scriptFiles),
       buildPrettierCommand(scriptFiles),
       buildPrettierCommand(etcFiles),
     ];
