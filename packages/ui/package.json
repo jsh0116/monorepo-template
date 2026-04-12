@@ -10,10 +10,11 @@
     "lint": "eslint --no-error-on-unmatched-pattern \"**/*.ts\" \"**/*.tsx\""
   },
   "devDependencies": {
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
     "eslint-custom": "workspace:*",
-    "typescript": "^6.0.2"
+    "tsconfig": "workspace:*",
+    "typescript": "catalog:"
   },
   "peerDependencies": {
     "react": "^19"

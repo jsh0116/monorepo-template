@@ -13,9 +13,9 @@
   "devDependencies": {
     "entity": "workspace:*",
     "eslint-custom": "workspace:*",
-    "vite": "^8.0.8",
-    "vite-tsconfig-paths": "^6.1.1",
-    "vitest": "^4.1.4",
+    "vite": "catalog:",
+    "vite-tsconfig-paths": "catalog:",
+    "vitest": "catalog:",
     "tsconfig": "workspace:*"
   }
 }

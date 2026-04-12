@@ -12,7 +12,19 @@
     "test": {
       "outputs": []
     },
+    "test:watch": {
+      "cache": false,
+      "persistent": true
+    },
     "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "preview": {
+      "cache": false,
+      "persistent": true
+    },
+    "start": {
       "cache": false,
       "persistent": true
     },
