@@ -4,7 +4,7 @@
   "author": "SeungHoon Jeong",
   "license": "MIT",
   "scripts": {
-    "lint": "eslint \"**/*.ts\"",
+    "lint": "eslint --no-error-on-unmatched-pattern \"**/*.ts\"",
     "test": "vitest --passWithNoTests",
     "test:watch": "vitest --watch --passWithNoTests"
   },
@@ -13,11 +13,10 @@
     "util": "workspace:*"
   },
   "devDependencies": {
-    "@babel/core": "^7.23.7",
-    "@babel/preset-env": "^7.23.8",
-    "@babel/preset-typescript": "^7.23.3",
-    "vite-tsconfig-paths": "^4.3.2",
-    "vitest": "^1.6.0",
+    "eslint-custom": "workspace:*",
+    "vite": "^8.0.8",
+    "vite-tsconfig-paths": "^6.1.1",
+    "vitest": "^4.1.4",
     "tsconfig": "workspace:*"
   }
 }

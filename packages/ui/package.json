@@ -7,15 +7,15 @@
   "author": "SeungHoon Jeong",
   "license": "MIT",
   "scripts": {
-    "lint": "eslint \"**/*.ts\" \"**/*.tsx\""
+    "lint": "eslint --no-error-on-unmatched-pattern \"**/*.ts\" \"**/*.tsx\""
   },
   "devDependencies": {
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint-custom": "workspace:*",
-    "typescript": "^5.0.4"
+    "typescript": "^6.0.2"
   },
   "peerDependencies": {
     "react": "^19"
   }
-} 
+}

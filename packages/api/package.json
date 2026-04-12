@@ -6,13 +6,14 @@
   "author": "SeungHoon Jeong",
   "license": "MIT",
   "scripts": {
-    "lint": "eslint \"**/*.ts\""
+    "lint": "eslint --no-error-on-unmatched-pattern \"**/*.ts\""
   },
   "dependencies": {
     "entity": "workspace:*",
     "util": "workspace:*"
   },
   "devDependencies": {
+    "eslint-custom": "workspace:*",
     "tsconfig": "workspace:*"
   }
 }

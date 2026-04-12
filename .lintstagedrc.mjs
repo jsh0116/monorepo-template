@@ -1,17 +1,4 @@
 import micromatch from 'micromatch';
-import { relative } from 'path';
-
-function buildNextLintCommand(app, filenames) {
-  if (filenames.length === 0) {
-    return 'echo "No NextJS files to lint"';
-  }
-
-  return `pnpm --filter ${app} lint --fix --file ${filenames
-    .map((filename) =>
-      relative(process.cwd(), filename).replace(`apps/${app}`, '.')
-    )
-    .join(' --file ')}`;
-}
 
 function buildESLintCommand(filenames) {
   if (filenames.length === 0) {
@@ -47,7 +34,7 @@ const linter = {
     const etcFiles = micromatch(allFiles, ['**/?(.)*.{html,css,json}']);
 
     return [
-      buildNextLintCommand('web', webNextFiles),
+      buildESLintCommand(webNextFiles),
       buildPrettierCommand(webNextFiles),
       buildESLintCommand(scriptFiles),
       buildPrettierCommand(scriptFiles),

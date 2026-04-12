@@ -6,9 +6,10 @@
   "author": "SeungHoon Jeong",
   "license": "MIT",
   "scripts": {
-    "lint": "eslint \"**/*.ts\""
+    "lint": "eslint --no-error-on-unmatched-pattern \"**/*.ts\""
   },
   "devDependencies": {
+    "eslint-custom": "workspace:*",
     "tsconfig": "workspace:*"
   }
 }
