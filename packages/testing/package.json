@@ -1,0 +1,32 @@
+{
+  "name": "testing",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./e2e": "./src/e2e/index.ts",
+    "./mocks": "./src/mocks/index.ts"
+  },
+  "author": "SeungHoon Jeong",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint --no-error-on-unmatched-pattern \"**/*.ts\"",
+    "test": "vitest --passWithNoTests",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui"
+  },
+  "dependencies": {
+    "@playwright/test": "^1.59.1",
+    "msw": "^2.13.2"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "eslint-custom": "workspace:*",
+    "vite": "^8.0.8",
+    "vite-tsconfig-paths": "^6.1.1",
+    "vitest": "^4.1.4",
+    "tsconfig": "workspace:*"
+  }
+}
