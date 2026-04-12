@@ -1,0 +1,9 @@
+{
+  "extends": "tsconfig/base.json",
+  "compilerOptions": {
+    "types": ["node"],
+    "noEmit": true,
+    "target": "es2022"
+  },
+  "include": ["vite.config.ts"]
+}

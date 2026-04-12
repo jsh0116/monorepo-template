@@ -11,31 +11,24 @@ function buildESLintCommand(filenames) {
 }
 
 function buildPrettierCommand(filenames) {
-  const filtedFilenames = filenames.filter((f) => !f.includes('/public/'));
+  const filtered = filenames.filter((f) => !f.includes('/public/'));
 
-  if (filtedFilenames.length === 0) {
+  if (filtered.length === 0) {
     return 'echo "No files to prettier"';
   }
 
-  return `pnpm prettier --write ${filtedFilenames.join(' ')}`;
-}
-
-function getNextFilesForApp(app, allFiles) {
-  return micromatch(allFiles, [`**/apps/${app}/src/**/*.{js,jsx,ts,tsx}`]);
+  return `pnpm prettier --write ${filtered.join(' ')}`;
 }
 
 const linter = {
   '*': (allFiles) => {
-    const webNextFiles = getNextFilesForApp('web', allFiles);
     const scriptFiles = micromatch(allFiles, [
-      '**/apps/web/!(src)/**/?(.)*.{js,mjs,ts}',
-      '**/packages/**/?(.)*.{js,mjs,ts}',
+      '**/apps/**/?(.)*.{js,mjs,ts,tsx,jsx}',
+      '**/packages/**/?(.)*.{js,mjs,ts,tsx,jsx}',
     ]);
     const etcFiles = micromatch(allFiles, ['**/?(.)*.{html,css,json}']);
 
     return [
-      buildESLintCommand(webNextFiles),
-      buildPrettierCommand(webNextFiles),
       buildESLintCommand(scriptFiles),
       buildPrettierCommand(scriptFiles),
       buildPrettierCommand(etcFiles),

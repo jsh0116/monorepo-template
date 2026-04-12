@@ -27,6 +27,12 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
+# Expo / React Native
+.expo/
+ios/
+android/
+web-build/
+
 # Turbo
 .turbo
 

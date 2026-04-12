@@ -6,7 +6,8 @@
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
-    "dev:web": "turbo dev --filter=web",
+    "dev:service": "turbo dev --filter=service-web",
+    "dev:admin": "turbo dev --filter=admin-web",
     "lint": "turbo run lint",
     "test": "turbo run test",
     "clean": "turbo run clean",
