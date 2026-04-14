@@ -54,3 +54,5 @@ next-env.d.ts
 .pnpm-store/
 .pnpm-debug.log
 .pnpm-state.json 
+
+docs/private
